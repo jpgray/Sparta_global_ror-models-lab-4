@@ -1,0 +1,21 @@
+<form class="" action="/<%= @dish.id%>" method="post">
+  <div>
+    <label class="whatever">Name:</label>
+  <input type="text" name="name" value="<%= @dish.name%>" placeholder="hi">
+  </div>
+  <div>
+    <label class="whatever">Rating:</label>
+  <input type="number" name="rating" value="<%= @dish.rating%>" placeholder="hi">
+  </div>
+
+  <div>
+    <label class="whatever">Vege_or_not:</label>
+  <input type="number" name="vege_or_not" value="<%= @dish.vege_or_not%>" placeholder="hi">
+  </div>
+
+    <% if (@dish.id)!=nil%>
+      <input type="hidden" name="_method" value="PUT">
+    <% end %>
+
+  <input type="submit" name="" value="save dish">
+</form>

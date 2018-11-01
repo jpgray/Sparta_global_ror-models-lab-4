@@ -1,0 +1,16 @@
+<form class="" action="/<%= @chef.id%>" method="post">
+  <div>
+    <label class="whatever">Name:</label>
+  <input type="text" name="name" value="<%= @chef.name%>" placeholder="hi">
+  </div>
+  <div>
+    <label class="whatever">Age:</label>
+  <input type="text" name="age" value="<%= @chef.age%>" placeholder="hi">
+  </div>
+
+    <% if (@chef.id)!=nil%>
+      <input type="hidden" name="_method" value="PUT">
+    <% end %>
+
+  <input type="submit" name="" value="save book">
+</form>
